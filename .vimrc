@@ -169,11 +169,13 @@ nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>ge :Gedit<CR>
-nmap <leader>gb :Gblame<CR>
+nmap <leader>gbl :Gblame<CR>
 nmap <leader>gv :Gvsplit<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>gbr :Gbrowse<CR>
+nmap <leader>gp :Gpush<CR>
+nmap <leader>gl :Glog<CR>
 
 " syntastic sesttings
 set statusline+=%#warningmsg#
