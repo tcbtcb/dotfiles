@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " " plugin on GitHub repo
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
 Plugin 'raimondi/delimitmate'
 Plugin 'tpope/vim-rails'
 Plugin 'altercation/vim-colors-solarized'
@@ -23,6 +24,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
+Plugin 'scrooloose/syntastic'
 " " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " " Git plugin not hosted on GitHub
@@ -39,6 +41,7 @@ Plugin 'fatih/vim-go'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax on
 
 let mapleader =','
 
@@ -77,6 +80,9 @@ set timeoutlen=500
 
 set background=dark
 colorscheme solarized
+"
+" change diff color
+let g:solarized_diffmode="high"
 
 " set cursorline
 set nowrap
@@ -158,3 +164,23 @@ EOF
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+" fugitive mappings
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>ge :Gedit<CR>
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gv :Gvsplit<CR>
+nmap <leader>gr :Gread<CR>
+nmap <leader>gw :Gwrite<CR>
+nmap <leader>gbr :Gbrowse<CR>
+
+" syntastic sesttings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
