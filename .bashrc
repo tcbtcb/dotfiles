@@ -154,8 +154,9 @@ eval "$(rbenv init -)"
 
 # Go config
 
-# export PATH=$PATH:/usr/local/go/bin
-# export GOBIN=$HOME/Work/bin
+export PATH=$PATH:/usr/local/go/bin
+export GOBIN=$HOME/go/bin
+export GOPATH=$HOME/go
 
 # editor variable
 
