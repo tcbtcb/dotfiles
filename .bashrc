@@ -89,7 +89,8 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias vi='vim'
+alias vi='mvim -v'
+alias vim='mvim -v'
 alias lsh='ls -lhGFr'
 alias lsa='ls -lhaGFr'
 alias reload='source ~/.bashrc'
@@ -122,6 +123,11 @@ alias aptc='sudo apt-cache search'
 alias aptd='sudo apt-get dist-upgrade'
 alias apti='sudo apt-get install'
 
+# gcloud aliases
+
+alias shdv="gcloud compute --project 'flywheel-dev' ssh"
+alias shio="gcloud compute --project 'flywheel-io' ssh"
+alias shtcb="gcloud compute --project 'thadbrown-web' ssh"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -148,9 +154,23 @@ if ! shopt -oq posix; then
 fi
 
 # Ruby paths
+#
+#export PATH=$HOME/.rbenv/bin:$PATH
+#eval "$(rbenv init -)"
 
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+# Google Cloud sdk profile settings
+source '/Users/thadbrown/Downloads/google-cloud-sdk/path.bash.inc'
+source '/Users/thadbrown/Downloads/google-cloud-sdk/completion.bash.inc'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/thadbrown/google-cloud-sdk/path.bash.inc ]; then
+  source '/Users/thadbrown/google-cloud-sdk/path.bash.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/thadbrown/google-cloud-sdk/completion.bash.inc ]; then
+  source '/Users/thadbrown/google-cloud-sdk/completion.bash.inc'
+fi
 
 # Go config
 

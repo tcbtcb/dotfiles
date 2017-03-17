@@ -23,6 +23,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'vim-ruby/vim-ruby'
 " Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-jdaddy'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'ekalinin/Dockerfile.vim'
@@ -45,6 +46,7 @@ Plugin 'jpalardy/vim-slime'
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
+set clipboard=unnamed
 
 let mapleader =','
 set path+=**
