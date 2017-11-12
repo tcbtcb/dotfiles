@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set modifiable
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -133,16 +134,6 @@ noremap <C-l> <C-w>l
 "" Language settings""
 """"""""""""""""""""""
 
-" python settings
-"
-au BufNewFile,BufRead *.py
-    \ set tabstop=4        |
-    \ set softtabstop=4    |
-    \ set shiftwidth=4     |
-    \ set textwidth=79     |
-    \ set expandtab        |
-    \ set autoindent       |
-    \ set fileformat=unix  
 
 """""""""""""""""""""
 "" Plugin settings ""
@@ -165,14 +156,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " YouCompleteMe
 
 " python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -210,8 +193,4 @@ nmap <leader>sn :SyntasticToggleMode<CR>
 " Gundo
 
 nnoremap <leader>u :GundoToggle<CR>
-
-" VIM slime
-
-let g:slime_target = 'tmux'
 
