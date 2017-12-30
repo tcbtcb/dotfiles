@@ -12,24 +12,16 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'raimondi/delimitmate'
-Plugin 'tpope/vim-rails'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-" Plugin 'ervandew/supertab'
-Plugin 'vim-ruby/vim-ruby'
-" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'jpalardy/vim-slime'
 " " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " " Git plugin not hosted on GitHub
@@ -147,18 +139,6 @@ let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-" Ultisnips config
-
-let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" YouCompleteMe
-
-" python with virtualenv support
-
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " fugitive mappings
 nmap <leader>gs :Gstatus<CR>
@@ -173,22 +153,10 @@ nmap <leader>gbr :Gbrowse<CR>
 nmap <leader>gp :Gpush<CR>
 nmap <leader>gl :Glog<CR>
 
-" syntastic sesttings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers=[ 'jshint' ]
-let g:syntastic_python_checkers=[ 'flake8' ]
-let g:syntastic_json_checkers=[ 'jsonlint' ]
-let g:syntastic_html_checkers=[ 'tidy' ]
-nmap <leader>pr :SyntasticCheck proselint
-nmap <leader>sn :SyntasticToggleMode<CR>
+" go mappings
+nmap <leader>gor :GoRun<CR>
+nmap <leader>gob :GoBuild<CR>
+nmap <leader>gov :GoVet<CR>k
 
 " Gundo
 
