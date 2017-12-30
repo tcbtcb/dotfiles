@@ -15,7 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'raimondi/delimitmate'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-jdaddy'
@@ -77,10 +77,10 @@ set timeoutlen=500
 """""""""""""""""""""""""
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 "
 " change diff color
-let g:solarized_diffmode="high"
+" let g:solarized_diffmode="high"
 
 " set cursorline
 set nowrap
