@@ -3,6 +3,5 @@
 !.tmux.conf
 !.vimrc
 !.gitignore
-!Vbox-setup-vim-config.sh
 !.bash_profile
-!.ssh/config
+!.config/alacritty/alacritty.yml
